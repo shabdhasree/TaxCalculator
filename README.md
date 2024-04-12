@@ -17,5 +17,7 @@ Enter your annual income in the input field.
 Click on the "Calculate Tax" button.
 The calculated tax amount will be displayed below the input field.
 
+
 **Customization:**
 You can customize this tax calculator by adjusting the tax rates or adding additional features as needed. You can modify the HTML, CSS, and JavaScript files to tailor the application to your requirements.
+
