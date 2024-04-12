@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <form id="taxForm">
+        <div class="form-group">
+            <h1>Tax Calculator</h1>
+            <label for="age">Age</label>
+            <select class="form-control" id="age">
+                <option value="<40">&lt;40</option>
+                <option value=">=40&<60">&ge;40 &lt;60</option>
+                <option value=">=60">&ge;60</option>
+            </select>
+            <div class="error-icon" id="ageErrorIcon" data-toggle="tooltip" title=""></div>
+        </div>
+        <div class="form-group">
+            <label for="income">Enter Your Income </label>
+            <input type="text" class="form-control" id="income">
+            <div class="error-icon" id="incomeErrorIcon" data-toggle="tooltip" title=""></div>
+        </div>
+        <div class="form-group">
+            <label for="extraIncome">Enter Your Extra Income</label>
+            <input type="text" class="form-control" id="extraIncome">
+            <div class="error-icon" id="extraIncomeErrorIcon" data-toggle="tooltip" title=""></div>
+        </div>
+        <div class="form-group">
+            <label for="deductions">Enter Total Applicable Deductions</label>
+            <input type="text" class="form-control" id="deductions">
+            <div class="error-icon" id="deductionsErrorIcon" data-toggle="tooltip" title=""></div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<div class="modal" id="resultModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Tax Calculation Result</h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="overallIncome"></p>
+                <p id="taxToBePaid"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
